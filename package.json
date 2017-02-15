@@ -1,0 +1,22 @@
+{
+  "name": "token_auth_basic",
+  "version": "0.0.1",
+  "description": "Basic authorization application, utilizing the token based auth",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ."
+  },
+  "author": "Ognjen Jevremovic",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "colors": "^1.1.2",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
+    "mongodb": "^2.2.11",
+    "serve-favicon": "^2.3.0"
+  }
+}

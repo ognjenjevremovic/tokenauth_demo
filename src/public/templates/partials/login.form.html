@@ -1,0 +1,75 @@
+<div class="clearfix">
+
+    <form id="loginForm" class="form-horizontal
+                                col-xs-10 col-xs-offset-1
+                                col-sm-8 col-sm-offset-2
+                                col-md-8 col-md-offset-2
+                                col-lg-6 col-lg-offset-3"
+            name="loginForm" novalidate>
+
+
+        <!-- Username Field Group -->
+        <div ng-class="['form-group', 'form-group-lg', 'has-feedback', {'has-error': loginForm.username.$invalid, 'has-success' : loginForm.username.$valid}]">
+            <!-- Input Field Group -->
+            <div class="input-group">
+                <!-- User icon -->
+                <div class="input-group-addon">
+                    <!-- Reffer to the svg user icon -->
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <!-- Text (input) field -->
+                <input type="text" id="username" class="form-control" name="username" placeholder="Korisničko ime" ng-model="login.user.username"   required="required">
+            </div>
+            <!-- Validation indicators (valid!)-->
+            <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"
+                    ng-if="loginForm.username.$valid">
+            </span>
+            <!-- Validation indicators (invalid!)-->
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"
+                   ng-if="loginForm.username.$touched && loginForm.username.$invalid">
+            </span>
+            <!-- More about the error (required) -->
+            <span class="errorDescription text-danger" ng-show="loginForm.username.$touched && loginForm.username.$error.required">
+                <i class="fa fa-exclamation" aria-hidden="true"></i>
+                Ovo polje je obavezno!
+            </span>
+        </div>
+
+
+        <!-- Password Field Group -->
+        <div ng-class="['form-group', 'form-group-lg', 'has-feedback', {'has-error': loginForm.password.$invalid, 'has-success' : loginForm.password.$valid}]">
+            <!-- Input Field Group -->
+            <div class="input-group">
+                <!-- Password Icon -->
+                <div class="input-group-addon">
+                    <!-- Reffer to the svg password icon -->
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </div>
+                <!-- Text (input) field -->
+                <input type="password" id="password" class="form-control" name="password" placeholder="********" ng-model="login.user.password" required="required">
+            </div>
+            <!-- Validation indicators (valid!)-->
+            <span class="glyphicon glyphicon-ok form-control-feedback smallSpaced" aria-hidden="true"
+                    ng-if="loginForm.password.$valid">
+            </span>
+            <!-- Validation indicators (invalid!)-->
+            <span class="glyphicon glyphicon-remove form-control-feedback noSpace smallSpaced" aria-hidden="true"
+                   ng-if="loginForm.password.$touched && loginForm.password.$invalid">
+            </span>
+            <!-- More about the error (required) -->
+            <span class="errorDescription text-danger" ng-show="loginForm.password.$touched && loginForm.password.$invalid">
+                <i class="fa fa-exclamation" aria-hidden="true"></i>
+                Ovo polje je obavezno!
+            </span>
+        </div>
+
+
+        <!-- Submit Form Button Group (just for separation) -->
+        <div class="form-group submit">
+            <!-- Button -->
+            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="login.login()" ng-disabled="!loginForm.$valid">Pristupi nalogu</button>
+        </div>
+
+
+    </form>
+</div>

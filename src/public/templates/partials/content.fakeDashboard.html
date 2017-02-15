@@ -1,0 +1,16 @@
+<div class="jumbotron text-center">
+  <h1>Niste ulogovani!</h1>
+  <br>
+  <br>
+  <p>
+      <a class="btn btn-primary btn-lg" ng-click="dashboard.getSecret()" ng-hide="dashboard.secret">Zatraži lozinku</a>
+      <a class="btn btn-primary btn-lg" ng-click="dashboard.getPublic()" ng-hide="dashboard.public">Zatraži svima dostupan info</a>
+  </p>
+
+  <p ng-show="dashboard.secret" ng-repeat="secret in dashboard.secret">
+      Secret:   <strong>{{secret.content}}</strong>
+  </p>
+  <p ng-show="dashboard.public" ng-repeat="public in dashboard.public">
+      Public:   <strong>{{public.content}}</strong>
+  </p>
+</div>

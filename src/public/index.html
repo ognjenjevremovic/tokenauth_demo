@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HotSpot4Basketball</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css" />
+
+        <!-- Font awesome (icons) -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <!-- Custom css -->
+        <link rel="stylesheet" href="css/main.min.css" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="/img/logo.png"/>
+
+        <!-- Responsive meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+        <!--------
+        *   Angular modules
+        *       - angular core
+        *       - angular ui-router
+        *       - angular-storage
+        -------->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="https://unpkg.com/angular-ui-router@0.3.2/release/angular-ui-router.min.js"></script>
+        <script src="https://cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.min.js"></script>
+
+
+        <!-- Application modules -->
+        <script src="/js/app.js"></script>
+
+        <!-- Application controllers -->
+        <script src="/js/controllers.js"></script>
+
+        <!-- Application directives -->
+        <script src="/js/directives.js"></script>
+
+        <!-- Application services -->
+        <script src="/js/services.js"></script>
+
+        <!-- Application constants -->
+        <script src="/js/constants.js"></script>
+
+    </head>
+
+    <body>
+        <!-- Wrapper -->
+        <div class="container-fluid"
+            ng-app="hs4b">
+
+            <!-- Web page specific view -->
+            <div class="view-wrapper"
+                ui-view>
+                    <!-- Application content -->
+            </div>
+
+        </div>
+    </body>
+</html>

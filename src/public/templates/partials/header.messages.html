@@ -1,0 +1,11 @@
+<!-- Error Message - Invalid form or wrong username/password combination -->
+<div class="info_messages">    
+    <p class="alert-danger" ng-show="errorMessage || $root.errorMessage">
+        {{errorMessage || $root.errorMessage}}
+    </p>
+
+    <!-- Success Message - Invalid form or wrong username/password combination -->
+    <p class="alert-success" ng-show="successMessage || $root.successMessage">
+        {{successMessage || $root.successMessage}}
+    </p>
+</div>
